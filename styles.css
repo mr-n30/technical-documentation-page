@@ -1,0 +1,133 @@
+/* FONTS_START */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* SETUP */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Verdana, Arial, sans-serif;
+  font-weight: 800;
+  background-color: #D1D1D1;
+}
+
+/* Main CSS */
+nav, #main-doc, section {
+  background: #F7F7F7;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+  height: 100%;
+  width: 200px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+header:not(nav header) {
+  width: 500px;
+  margin: auto;
+}
+
+header:not(nav header) {
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  text-transform: uppercase;
+}
+
+p, a {
+  text-transform: capitalize;
+}
+
+nav a, nav header {
+  padding: 1rem;
+  border-top: solid 1px #000;
+}
+
+p {
+  padding: .5rem;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+code {
+  width: 700px;
+  height: 500px;
+  background: #000;
+  margin: .5rem auto;
+  border-radius: 5px;
+  color: rgba(0,255,10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+#main-doc {
+  width: 1000px;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+  flex-grow: 4;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+}
+
+@media (max-width: 500px)  or (max-width: 1402px) {
+  nav {
+    width: 100vw;
+    margin: 0;
+    height: 0;
+    border: solid 1px #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 1;
+    background-color: #d1d1d1;
+  }
+
+  nav header, nav a {
+    background-color: #d1d1d1;
+    width: 100vw;
+    margin: 0;
+  }
+
+  section, header:not(nav header), ul, ul li, p, code {
+    text-align: center;
+    width: 100%;
+  }
+
+  #main-doc {
+    margin-top: 300px;
+    height: 100%;
+    width: 100%;
+  }
+}
